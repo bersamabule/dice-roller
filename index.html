@@ -18,6 +18,7 @@
             min-height: 100vh;
             background-color: transparent;
             overflow: hidden;
+            font-family: Arial, sans-serif;
         }
 
         .container {
@@ -27,9 +28,25 @@
             justify-content: center;
             gap: 50px;
             position: relative;
-            width: 700px;
-            height: 400px;
+            width: 100%;
+            max-width: 700px;
+            padding: 20px;
+            box-sizing: border-box;
             margin: 0 auto;
+        }
+        
+        /* For mobile devices */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                gap: 30px;
+                width: 100%;
+                padding: 10px;
+            }
+            
+            .die-container, .cat-container {
+                transform: scale(0.85);
+            }
         }
 
         .die-container {
